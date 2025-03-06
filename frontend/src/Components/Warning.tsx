@@ -2,7 +2,7 @@ import React from 'react'
 import { TriangleAlert } from 'lucide-react';
 
 interface Colors {
-  color : String
+  color : string
 }
 
 const Warning : React.FC<Colors>= ({color}) => {

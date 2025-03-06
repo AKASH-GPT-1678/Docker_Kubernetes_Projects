@@ -7,7 +7,6 @@ import { CircleCheck } from 'lucide-react';
 import Qrcode from '../../public/qrcode .png'
 import Image from 'next/image';
 import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
 import { Input } from './ui/input'
 import Schema from './schema';
 import Link from 'next/link';

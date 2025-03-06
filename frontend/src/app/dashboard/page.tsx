@@ -12,16 +12,13 @@ import { Truck } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import Barchart from "@/Components/Barchart";
 import SalesLineChart from "@/Components/Linechart";
-import { ColorContext } from "@/Components/Anowarn";
-import { useContext } from "react";
-import { ContextType } from "@/Components/Anowarn";
+
 
 // import { ContextType } from "react";
-const about = () => {
+const About = () => {
   const [show , setshow] = React.useState(false)
-  const context  = useContext(ColorContext)
 
-const {color , setColor} = context;
+
 
   return (
   
@@ -156,5 +153,5 @@ const {color , setColor} = context;
   )
 }
 
-export default about
+export default About
 

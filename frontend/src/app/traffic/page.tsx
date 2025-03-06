@@ -12,7 +12,7 @@ import { Clock } from 'lucide-react';
 import { TriangleAlert } from 'lucide-react';
 import { MapPinned } from 'lucide-react';
 import { Button } from '@/Components/ui/button';
-const page = () => {
+const Page = () => {
   const [show, setshow] = useState(true)
   return (
     <div className='w-9/12 ml-auto'>
@@ -166,4 +166,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

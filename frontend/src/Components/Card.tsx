@@ -6,7 +6,7 @@ import { Camera } from 'lucide-react'
 import "normalize.css";
 import { useRouter } from 'next/navigation'
 // import Waste
-import Link from 'next/link'
+// import Link from 'next/link'
 const Card = () => {
   const router = useRouter()
   return (

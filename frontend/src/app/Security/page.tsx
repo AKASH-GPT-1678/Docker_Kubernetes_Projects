@@ -10,7 +10,7 @@ import { Lanechart, Barchartt } from '@/Components/Allthree'
 import SwitchButton from '@/Components/Switch'
 import { Button } from '@mui/material';
 
-const page = () => {
+const Page = () => {
   const [show, setshow] = React.useState(false)
   const department = ["Police Dept" , "Fire depat" , "Files Depat"]
 
@@ -113,4 +113,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

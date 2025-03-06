@@ -1,5 +1,5 @@
 import React from 'react'
-import { BarChart , Bar , XAxis , YAxis , CartesianGrid , Tooltip , Legend , ResponsiveContainer , Rectangle
+import { BarChart , Bar , XAxis , YAxis , CartesianGrid , Tooltip , Legend , ResponsiveContainer 
 
 
 
@@ -25,14 +25,17 @@ const Data = [
   ];
   return (
     <div>
+       <ResponsiveContainer>
         <BarChart width={300} height={300} data={Data}>
             <Bar dataKey="sales"fill='green' />
             <CartesianGrid stroke="#ccc" />
             <XAxis dataKey="name" />
             <YAxis />
+            <Tooltip/>
+            <Legend/>
 
         </BarChart>
-     
+        </ResponsiveContainer>
       
     </div>
   )

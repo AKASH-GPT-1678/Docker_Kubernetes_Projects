@@ -2,16 +2,13 @@ import React from 'react'
 import { Button } from './ui/button'
 import Image from 'next/image'
 import taswir from '../../public/palm.png'
-import Card from './Card'
-import { createContext,useContext , useState } from 'react'
-import { Povider } from './Povider'
+// import Card from './Card'
+import { useContext } from 'react'
+// import { Povider } from './Povider'
 import { Truecontext } from './Povider'
-interface Type {
-  children : React.ReactNode;
-}
-const PlayContext = createContext({play: false})
+
 const Header = () => {
-   const [play , setplay] = React.useState(false)
+  
    const {show , setshow} = useContext(Truecontext)
  
   return (

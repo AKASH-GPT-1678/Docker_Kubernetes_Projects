@@ -9,7 +9,7 @@ import Irfan from '../../../public/irfan.png'
 import Warning from '@/Components/Warning'
 import { ConsumptionProductionChart, EnergyProfileChart, EnergySourcesChart, EnergyConsumptionChart } from '@/Components/Enerygy';
 
-const page = () => {
+const Energy = () => {
   const [show, setshow] = useState(true)
   return (
     <div>
@@ -78,5 +78,5 @@ const page = () => {
   )
 }
 
-export default page
+export default Energy
 

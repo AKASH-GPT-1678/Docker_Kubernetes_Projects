@@ -30,15 +30,15 @@ const Catwise = [
 
 
 
-const Weekly = [
-  { day: 1, incidents: 35 },
-  { day: 2, incidents: 40 },
-  { day: 3, incidents: 38 },
-  { day: 4, incidents: 45 },
-  { day: 5, incidents: 50 },
-  { day: 6, incidents: 55 },
-  { day: 0, incidents: 48 }
-]
+// const Weekly = [
+//   { day: 1, incidents: 35 },
+//   { day: 2, incidents: 40 },
+//   { day: 3, incidents: 38 },
+//   { day: 4, incidents: 45 },
+//   { day: 5, incidents: 50 },
+//   { day: 6, incidents: 55 },
+//   { day: 0, incidents: 48 }
+// ]
 
 export const Lanechart = () => {
   return (
