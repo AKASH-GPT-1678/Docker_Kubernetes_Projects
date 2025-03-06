@@ -5,6 +5,8 @@ import { Button } from './ui/button'
 import { Camera } from 'lucide-react'
 import "normalize.css";
 import { useRouter } from 'next/navigation'
+// import Waste
+import Link from 'next/link'
 const Card = () => {
   const router = useRouter()
   return (
@@ -28,11 +30,12 @@ const Card = () => {
       <div className='bg-red-300 p-3  rounded-2xl'>
       <div className='flex flex-col items-center'>
         <ul className='w-full'>
-        <li className='flex flex-row items-center transition-transform transform hover:bg-blue-100 p-2 active:bg-white cursor-pointer font-bold'><Camera className='mr-7'/> Item 1</li>
-        <li className='flex flex-row items-center transition-transform transform hover:bg-blue-100 p-2 active:bg-white cursor-pointer font-bold'><Camera className='mr-7'/> Item 2</li>
-        <li className='flex flex-row items-center transition-transform transform hover:bg-blue-100 p-2 active:bg-white cursor-pointer font-bold'><Camera className='mr-7'/> Item 3</li>
-        <li className='flex flex-row items-center transition-transform transform hover:bg-blue-100 p-2 active:bg-white cursor-pointer font-bold'><Camera className='mr-7'/> Item 4</li>
-        <li className='flex flex-row items-center transition-transform transform hover:bg-blue-100 p-2 active:bg-white cursor-pointer font-bold'><Camera className='mr-7'/> Item 5</li>
+        <li className='flex flex-row items-center transition-transform transform hover:bg-blue-100 p-2 active:bg-white cursor-pointer font-bold' onClick={()=>router.push('/dashboard')}><Camera className='mr-7'/> Dashboard</li>
+        <li className='flex flex-row items-center transition-transform transform hover:bg-blue-100 p-2 active:bg-white cursor-pointer font-bold' onClick={()=>router.push('/traffic')}><Camera className='mr-7'/> Traffic Management</li>
+        <li className='flex flex-row items-center transition-transform transform hover:bg-blue-100 p-2 active:bg-white cursor-pointer font-bold' onClick={()=>router.push('/Security')}><Camera className='mr-7'/> Security</li>
+        <li className='flex flex-row items-center transition-transform transform hover:bg-blue-100 p-2 active:bg-white cursor-pointer font-bold' onClick={()=>router.push('/Waste')}><Camera className='mr-7'/> Waste Management </li>
+        <li className='flex flex-row items-center transition-transform transform hover:bg-blue-100 p-2 active:bg-white cursor-pointer font-bold' onClick={()=>router.push('/Energy')}><Camera className='mr-7'/> Energy Management</li>
+        <li className='flex flex-row items-center transition-transform transform hover:bg-blue-100 p-2 active:bg-white cursor-pointer font-bold' onClick={()=>router.push('/More')}><Camera className='mr-7'/> Settigs</li>
       </ul>
         
       </div>
@@ -43,3 +46,4 @@ const Card = () => {
 }
 
 export default Card
+

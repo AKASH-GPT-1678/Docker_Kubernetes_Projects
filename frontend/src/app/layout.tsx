@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 // import Povider from "@/Components/Povider";
 import { Povider } from "@/Components/Povider";
+import { Anowarn } from "@/Components/Anowarn";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,8 +31,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
        <Povider>
+       <Anowarn>
         {children
-        } </Povider>
+        }</Anowarn>
+        
+         </Povider>
+        
       </body>
     </html>
   );
