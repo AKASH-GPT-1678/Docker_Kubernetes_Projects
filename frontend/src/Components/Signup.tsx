@@ -38,7 +38,7 @@ const Signup = () => {
           name : "",
           email : "",
           age : "",
-          password : ""
+          passwordd : ""
 
         }
         
@@ -99,8 +99,8 @@ const Signup = () => {
             {errors.name && <span>{errors.name.message}</span>}
             <Input type="email" placeholder='Enter your email' className='w-6/12 mb-2' {...register('email')} />
             {errors.email && <span>{errors.email.message}</span>}
-            <Input type="password" placeholder='Enter your password' className='w-6/12 mb-2' {...register('password')} />
-            {errors.password && <span>{errors.password.message}</span>}
+            <Input type="password" placeholder='Enter your password' className='w-6/12 mb-2' {...register('passwordd')} />
+            {errors.passwordd && <span>{errors.passwordd.message}</span>}
             <Input type="number" placeholder='Enter your age' className='w-6/12 mb-2' {...register('age')} />
             {errors.age && <span>{errors.age.message}</span>}
             <div className='flex flex-row gap-5 mt-5'>

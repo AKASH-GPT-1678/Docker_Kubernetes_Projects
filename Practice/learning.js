@@ -27,3 +27,9 @@ numbers = [12, 24, 36];
 numbers[5] = 48;
 console.log(numbers)
 console.log(numbers.length);
+
+
+
+export const Sume =(a, b) => {
+    return a + b
+}

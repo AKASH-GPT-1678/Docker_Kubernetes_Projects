@@ -23,6 +23,7 @@ const Header = () => {
                 <ul className='transition-transform transform hover:scale-125 cursor-pointer'>About</ul>
                 <ul className='transition-transform transform hover:scale-125 cursor-pointer'>Services</ul>
                 <ul className='transition-transform transform hover:scale-125 cursor-pointer'>How it Works</ul>
+                <ul className='cursor-pointer'>Chat</ul>
                 {/* <div className='flex flex-row mt-0 cursor-pointer'> */}
                 <Button size={'lg'} className='cursor-pointer'>Contact</Button>
                 <Image src={taswir} alt='Mydea'  className='w-15 h-15 mr-5 cursor-pointer transform hover:scale-125`' onMouseEnter={() =>setshow(true)} onMouseLeave={() =>setshow(false)}/>

@@ -6,6 +6,9 @@ import React from 'react'
 // import Warning from '@/Components/Warning'
 // import IOSSwitch from '@mui/material/Switch';
 // import { Lanechart } from '@/Components/Allthree';
+import Chatroom from '@/Components/Chatroom';
+import Chatbot from '@/Components/Chatbot';
+import Traffic from '../traffic/traffic';
 // import { Label } from 'recharts';
 const page = () => {
   
@@ -14,7 +17,11 @@ const page = () => {
 
   return (
     <div>
-      <h1>Hello </h1>
+     
+      {/* <Chatbot/> */}
+      {/* <Chatroom/> */}
+      <Traffic/>
+      
 
 
        

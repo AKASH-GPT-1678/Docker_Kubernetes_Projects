@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 // import Waste
 // import Link from 'next/link'
 const Card = () => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <div className='bg-blue-800  w-[250px] h-[350px]'>
     <div className='border-4 border-black w-[250px] h-[350px]'>
@@ -23,7 +23,7 @@ const Card = () => {
 
       </div>
       <div className='flex flex-row gap-5 mt-7 mb-2'>
-        <Button className='cursor-pointer' variant={'destructive'}>Login </Button>
+        <Button className='cursor-pointer' variant={'destructive'} onClick={()=>router.push('/login')}>Login </Button>
         <Button className='cursor-pointer bg-black text-white ' variant={'ghost'} onClick={()=>router.push('/Signup')}>Sign Up </Button>
       </div>
       </div>

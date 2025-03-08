@@ -1,7 +1,9 @@
 import mongoose, { Schema } from "mongoose";
 
 const userschema = new Schema({
-    name : String,
+    name : {
+        type : String
+    },
     email : {
         type : String,
         required : true,
@@ -10,6 +12,10 @@ const userschema = new Schema({
         type : Number,
         required : false
 
+    },
+    password : {
+        type : String,
+        required : true
     }
 })
 
