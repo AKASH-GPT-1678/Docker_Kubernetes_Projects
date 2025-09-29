@@ -17,9 +17,44 @@ const Userrr = new Schema({
     password : {
         type : String,
         required : true
-    }
+    },
+    
+
 })
 
-const Export = mongoose.model("Luser" , Userrr)
+export const Luser = mongoose.model("Luser" , Userrr)
 
-export default Export
+
+const Reportt = new Schema({
+    user : {
+        type : String
+        
+    },
+    complaint : {
+
+    },
+    type : {
+
+    },
+    urgency: {
+
+    },
+    status : {
+       
+    },
+    dateOfRegister :{
+
+    }
+
+
+})
+
+export const Report = mongoose.model("Report" , Reportt)
+
+// user : z.string({message : "Name is Required Atleast "}),
+// complaint : z.string({message : 'Teh compalint '}),
+// type : z.enum(complaintcate),
+// urgency: z.enum(["Low", "Medium", "High"], { message: "Urgency level is required" }),
+// status: z.enum(["Pending", "In Progress", "Resolved"], { message: "Status is required" }),
+// dateOfRegister: z.date(),
+

@@ -1,7 +1,7 @@
-import User from "../modela/user.model.js";
+
 import jwt from 'jsonwebtoken'
 import bcrypt from "bcrypt"
-import Luser from "../modela/user.another.js";
+import { Luser } from '../modela/user.another.js';
 
 export const Register = async (req, res) => {
     try {

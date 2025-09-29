@@ -25,7 +25,7 @@ const SwitchButton = () => {
         <div onClick={Onoff}>
           <div
             className={`
-         rounded-lg h-[30px] w-[60px] bg-amber-300 cursor-pointer  mt-10 ml-10
+         rounded-lg h-[30px] w-[60px] bg-amber-300 cursor-pointer   ml-10
          ${firstdiv}
         `}
           >

@@ -12,6 +12,9 @@ import { Clock } from 'lucide-react';
 import { TriangleAlert } from 'lucide-react';
 import { MapPinned } from 'lucide-react';
 import { Button } from '@/Components/ui/button';
+
+import { Weekly , Daily } from '@/Components/Trafficchat';
+import SwitchButton from '@/Components/Switch';
 const Page = () => {
   const [show, setshow] = useState(true)
   return (
@@ -48,14 +51,24 @@ const Page = () => {
         </p>
 
         <div className='bg-gray-200 w-11/12 h-[300px] mt-5 cursor-pointer'>
+        <div className='mt-5  w-full '>
+       
+        </div>
 
         </div>
       </div>
       <div className='grid grid-cols-2 gap-2 mt-5'>
         <div className='w-10/12 h-[300px] border-2 border-black'>
+        <div className='mt-10 h-400px curor-pointer'>
+          <Weekly/>
+        </div>
 
         </div>
         <div className='w-10/12 h-[300px] border-2 border-black'>
+        <div className='mt-10 h-400px curor-pointer'>
+          <Daily/>
+        </div>
+      
 
         </div>
       </div>
@@ -63,101 +76,118 @@ const Page = () => {
         <h1>Traffic Incidents</h1>
         <p>Recent traffic incidents and their status</p>
         <div>
-          <table>
-            <tr>
-              <th className='px-16 py-2'>ID</th>
-              <th className='px-16 py-2'>Location</th>
-              <th className='px-16 py-2'>Type</th>
-              <th className='px-16 py-2'>Severity</th>
-              <th className='px-16 py-2'>Time</th>
-              <th className='px-16 py-2'>Status</th>
-              <th className='px-16 py-2'>Actions</th>
-            </tr>
-            <tr>
-              <td>Hello</td>
-              <td>World</td>
-              <td>Foo</td>
-              <td>Bar</td>
-              <td>Baz</td>
-              <td>Qux</td>
-              <td>Quux</td>
-            </tr>
-            <tr>
-              <td>Hello</td>
-              <td>World</td>
-              <td>Foo</td>
-              <td>Bar</td>
-              <td>Baz</td>
-              <td>Qux</td>
-              <td>Quux</td>
-            </tr>
-            <tr>
-              <td>Hello</td>
-              <td>World</td>
-              <td>Foo</td>
-              <td>Bar</td>
-              <td>Baz</td>
-              <td>Qux</td>
-              <td>Quux</td>
-            </tr>
-            <tr>
-              <td>Hello</td>
-              <td>World</td>
-              <td>Foo</td>
-              <td>Bar</td>
-              <td>Baz</td>
-              <td>Qux</td>
-              <td>Quux</td>
-            </tr>
-            <tr>
-              <td>Hello</td>
-              <td>World</td>
-              <td>Foo</td>
-              <td>Bar</td>
-              <td>Baz</td>
-              <td>Qux</td>
-              <td>Quux</td>
-            </tr>
-            <tr>
-              <td>Hello</td>
-              <td>World</td>
-              <td>Foo</td>
-              <td>Bar</td>
-              <td>Baz</td>
-              <td>Qux</td>
-              <td>Quux</td>
-            </tr>
-            <div>
-              <div className='flex flex-row w-full border-2 border-black '>
-                <div>
-                  <h3 className='mt-3'>Showing Results {} out of 5 </h3>
-                </div>
-                <div className='flex flex-row cursor-pointer border-3 border-black w-full '>
-                  <Button>Previous</Button>
-                  <Button>Next</Button>
-                </div>
-              </div>
-            </div>
-          </table>
+        <div>
+      <div className='flex flex-col'>
+        <div >
+          <ul className='flex flex-row justify-between p-5'>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+
+          </ul>
+        </div>
+        <div >
+          <ul className='flex flex-row justify-between p-5 border-2 border-black'>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+          </ul>
+        </div>
+        <div >
+          <ul className='flex flex-row justify-between p-5 border-2 border-black'>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+          </ul>
+        </div>
+        <div >
+          <ul className='flex flex-row justify-between p-5 border-2 border-black'>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+          </ul>
+        </div>
+        <div >
+          <ul className='flex flex-row justify-between p-5 border-2 border-black'>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+          </ul>
+        </div>
+
+
+      </div>
+     </div>
         </div>
       </div>
       
      <div className='flex flex-row justify-evenly'>
       <div className='flex flex-col gap-10 mt-6 w-5/12'>
-        <div className='h-[50px] border-2 border-black'></div>
-        <div className='h-[50px] border-2 border-black'></div>
-        <div className='h-[50px] border-2 border-black'></div>
+        <div className='h-[50px] border-2 border-black'>
+          <div className='flex flex-row gap-10 mt-4 justify-between'>
+             <h2 className='ml-5'>Main St & 5th Ave</h2>
+             <div className='flex flex-row gap-4 mr-3 cursor-pointer'>
+              <p className='bg-orange-300 p-1'>Normal</p>
+              <p className='bg-green-400 p-1'>Override</p>
+             </div>
+          </div>
+
+        </div>
+        <div className='h-[50px] border-2 border-black'>
+          <div className='flex flex-row gap-10 mt-4 justify-between'>
+             <h2 className='ml-5'>2nd St & 3rd Ave</h2>
+             <div className='flex flex-row gap-4 mr-3 cursor-pointer'>
+              <p className='bg-orange-300 p-1'>Normal</p>
+              <p className='bg-green-400 p-1'>Override</p>
+             </div>
+          </div>
+
+        </div>
+        <div className='h-[50px] border-2 border-black'>
+          <div className='flex flex-row gap-10 mt-4 justify-between'>
+             <h2 className='ml-5'>4th St & 5th Ave</h2>
+             <div className='flex flex-row gap-4 mr-3 cursor-pointer'>
+              <p className='bg-orange-300 p-1'>Normal</p>
+              <p className='bg-green-400 p-1'>Override</p>
+             </div>
+          </div>
+
+        </div>
       </div>
       <div className='flex flex-col w-5/12 mt-10'>
-      <div className='h-[100px]  border-2 border-black'>
-        <h3>Hello </h3>
-        <p>Priyanka Jonas</p>
-        <Button className='cursor-pointer'>Dispath Emergencry Route</Button>
+      <div className='h-[120px]  border-2 border-black flex flex-col gap-3'>
+        <div className='ml-5 flex flex-col gap-2'>
+          <h3 className='font-bold'>Emergency Vehicle Routing</h3>
+          <p>Priyanka Jonas</p>
+        </div>
+        <Button className='cursor-pointer w-full bg-blue-600 text-white'>Dispath Emergencry Route</Button>
       </div>
-      <div className='h-[100px]  border-2 border-black'>
+      <div className='h-[120px]  border-2 border-black flex flex-col gap-3'>
         <h3>Traffic Evacuation Plan</h3>
         <p>Coordinate traffic flow for emergency evacuation</p>
-        <Button className='cursor-pointer'>Activate Evacation  Plan </Button>
+        <div className='mt-5'>
+          <Button className='cursor-pointer bg-red-500 w-full text-white'>Activate Evacation  Plan </Button>
+        </div>
       </div>
 
       </div>

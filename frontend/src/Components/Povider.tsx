@@ -13,6 +13,20 @@ interface Bachaprep {
     children : React.ReactNode;
 }
 
+interface Setchat {
+  Chat : Boolean
+}
+
+interface ShowChat {
+  showchat: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export const ShowChat = createContext<ShowChat>({
+  showchat : false,
+  setShow:() => {}
+})
+
 export const Truecontext = createContext<PlayContextType>({
     show: false,
     setshow: () => {},
@@ -27,4 +41,14 @@ export const Povider : React.FC<Bachaprep>= ({children }) => {
   )
 }
 
-// export default Povider
+export const SetChat : React.FC<Bachaprep>  = ({children}) => {
+  const [showchat , setShow] = React.useState(false)
+  return(
+   <ShowChat.Provider value={{showchat , setShow}}>
+   {children}
+   </ShowChat.Provider>
+  )
+
+}
+
+

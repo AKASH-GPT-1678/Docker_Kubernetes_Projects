@@ -8,7 +8,10 @@ import { Bell } from 'lucide-react'
 import Irfan from '../../../public/irfan.png'
 import Warning from '@/Components/Warning'
 import { ConsumptionProductionChart, EnergyProfileChart, EnergySourcesChart, EnergyConsumptionChart } from '@/Components/Enerygy';
-
+import SwitchButton from '@/Components/Switch';
+// import { Slider } from '@/Components/ui/slider';
+import { Button } from '@/Components/ui/button';
+import { Slider } from '@mui/material';
 const Energy = () => {
   const [show, setshow] = useState(true)
   return (
@@ -33,17 +36,14 @@ const Energy = () => {
           <Warning color={"amber"} />
         </div>
         <div className='grid grid-cols-4 gap-4 bg-white cursor-pointer mt-5'>
-          {/* <div className='w-[200px] h-[150px] border-2 border-black flex items-center'><Car fill="white" size={50} className='ml-5 bg-blue-400 p-2' /></div>
-          <div className='w-[200px] h-[150px] border-2 border-black flex items-center'><Clock size={50} fill="white" className='ml-5 bg-yellow-400 p-2' /></div>
-          <div className='w-[200px] h-[150px] border-2 border-black flex items-center'><TriangleAlert size={50} fill="white" className='ml-5 bg-red-400 p-2' /></div>
-          <div className='w-[200px] h-[150px] border-2 border-black flex items-center'><MapPinned size={50} fill="white" className='ml-5 bg-green-400 p-2' /></div> */}
+
 
 
         </div>
         <div>
           <h1>Energy Grid Map</h1>
           <p>
-          Real-time view of energy production and consumption
+            Real-time view of energy production and consumption
 
 
 
@@ -57,23 +57,100 @@ const Energy = () => {
         </div>
         <div className='grid grid-cols-2 gap-2 mt-5'>
           <div className='w-full h-[300px] border-2 border-black cursor-pointer'>
-          <ConsumptionProductionChart/>
+            <ConsumptionProductionChart />
 
           </div>
           <div className='w-full h-[300px] border-2 border-black cursor-pointer'>
-          <EnergyProfileChart/>
+            <EnergyProfileChart />
 
           </div>
-          
-            <div className='w-full h-[300px] border-2 border-black cursor-pointer'>
-            <EnergySourcesChart/>
-            </div>
-            <div className='w-full h-[300px] border-2 border-black cursor-pointer'>
-            <EnergyConsumptionChart/>
-            </div>
-          
+
+          <div className='w-full h-[300px] border-2 border-black cursor-pointer'>
+            <EnergySourcesChart />
+          </div>
+          <div className='w-full h-[300px] border-2 border-black cursor-pointer'>
+            <EnergyConsumptionChart />
+          </div>
+
         </div>
+        <div className='flex flex-row justify-between'>
+
+          <div className='flex flex-col border-2 border-black w-1/2'>
+            <h2 className='font-bold text-xl mt-3'>Energy Management Controls</h2>
+            <div className='flex flex-col gap-5'>
+              <div>
+                <h3>Smart Grid  Control</h3>
+                <div>
+                  <div className='bg-gray-200 w-1/3 h-[50px] mt-3 '>
+                    <div className='flex flex-row justify-between items-center h-full'>
+                      <h2 className='font-bold text-xxl cursor-pointer'>Peak Load Balancing</h2>
+
+                      <SwitchButton />
+
+
+                    </div>
+                  </div>
+                  <div className='bg-gray-200 w-1/3 h-[50px] mt-3 '>
+                    <div className='flex flex-row justify-between items-center h-full'>
+                      <h2 className='font-bold text-xxl cursor-pointer'>Renewable Energy Distribution</h2>
+
+                      <SwitchButton />
+
+
+                    </div>
+                  </div>
+                  <div className='bg-gray-200 w-1/3 h-[50px] mt-3 '>
+                    <div className='flex flex-row justify-between items-center h-full'>
+                      <h2 className='font-bold text-xxl cursor-pointer'>Energy Storage System</h2>
+
+                      <SwitchButton />
+
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div className='flex flex-col border-2 border-black w-1/2'>
+            <div className=''>
+              <h2 className='font-bold text-xl mt-3'>Energy Storage Management</h2>
+              <div className='w-9/12'>
+                <h2>Battery Storage</h2>
+                <Slider defaultValue={50}  className='cursor-pointer mt-5 ml-5'/>
+                <div>
+                  <ul className='flex flex-row justify-between mt-5'>
+                    <li>0%</li>
+                    <li>50%</li>
+                    <li>100%</li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                 <h2>Storage Mode</h2>
+                 <div className='flex flex-row w-8/12 justify-between'>
+                  <Button className='bg-blue-500 px-8 cursor-pointer'>Auto</Button>
+                  <Button className='bg-gray-500 px-8 cursor-pointer'>Charge</Button>
+                  <Button className='bg-gray-500 px-8 cursor-pointer'>Discharge</Button>
+                 </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        {/* <div>
+        <h1>hello</h1>
+       </div> */}
+
       </div>
+
+
+
+
     </div>
   )
 }

@@ -15,5 +15,26 @@ type Schema = z.infer<typeof Usrschema>
 
 export default Schema;
 
-// export default Usrschema
-// let regex = new RegExp
+
+const complaintcate = [
+    "Infrastructure",
+    "Sanitation",
+    "Safety",
+    "Traffic",
+    "Environment",
+    "Others",
+] as const;
+
+
+export const Reportschema = z.object({
+    user : z.string({message : "Name is Required Atleast "}),
+    complaint : z.string({message : 'Teh compalint '}),
+    type : z.enum(complaintcate),
+    urgency: z.enum(["Low", "Medium", "High"], { message: "Urgency level is required" }),
+    status: z.enum(["Pending", "In Progress", "Resolved"], { message: "Status is required" }),
+    dateOfRegister: z.date(),
+    file : z.instanceof(File),
+
+})
+
+export type Reproting = z.infer<typeof Reportschema>

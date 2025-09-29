@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 // import Povider from "@/Components/Povider";
 import { Povider } from "@/Components/Povider";
 import { Anowarn } from "@/Components/Anowarn";
+import { Provider } from "react-redux"
+// import store from "@/Components/Store";
+import { SetChat } from "@/Components/Povider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,13 +33,27 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-       <Povider>
-       <Anowarn>
-        {children
-        }</Anowarn>
-        
-         </Povider>
-        
+      
+        <Povider >
+          <SetChat>
+
+
+          <Anowarn>
+
+            {children
+
+            }
+
+
+          </Anowarn>
+          </SetChat>
+
+
+
+        </Povider>
+    
+        {/* </Provider>
+         */}
       </body>
     </html>
   );

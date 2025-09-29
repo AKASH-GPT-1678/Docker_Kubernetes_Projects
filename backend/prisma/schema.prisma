@@ -13,9 +13,36 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model User {
-  id       String   @id @default(cuid())
-  name     String
-  email    String   @unique
+  id    String @id @default(cuid())
+  name  String
+  email String @unique
+}
+
+model Report {
+  id             String   @id @default(cuid())
+  user           String
+  complaint      String
+  type           String
+  urgency        String
+  status         String
+  dateOfRegister DateTime @default(now())
+}
+
+enum Level {
+  Low
+  LowAbove
+  Middle
+  MiddleAbove
+  Full
+  Overflow
+}
+
+model Dustbin {
+  id           Int     @id @default(autoincrement())
+  location     String
+  filllevel    Level
+  last_collect String
+  latitude     Int?
+  longitude    Int?
 }
