@@ -7,7 +7,7 @@ import Traffic from '../traffic/traffic';
 import dynamic from 'next/dynamic';
 // import Gmaps from '@/Components/Gmaps';
 import { Weekly } from '@/Components/Trafficchat';
-import Parking from '@/Components/Parking';
+
 import { Formofaci } from '@/Components/Servicedrop';
 import axios from 'axios'
 
